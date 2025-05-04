@@ -38,7 +38,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const data = new Data(inputData);
   
   const table = new Table(data.data);
-  table.createTable();
+  table.init();
+
   
   let count = 0;
   let sortType;
@@ -52,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
       sortType = 'cba';
     }
     
-    table.sortTable(key, sortType);
+    table.init(data.sort(key, sortType));
     table.addArrow(key, sortType);
 
     count++;

@@ -3,25 +3,9 @@ display: flex;
 justify-content: center;
 }
 
-.table {
-
-}
-
-.table_header {
-
-}
-
 .table_header_th {
   border: 2px solid gray;
   padding: 3px;
-}
-
-.table_body {
-
-}
-
-.table_body_row {
-
 }
 
 .table_body_td {

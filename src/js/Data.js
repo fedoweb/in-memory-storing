@@ -4,18 +4,20 @@ export default class Data {
     this.generator = this.keyGenerator();
   }
 
-  sort(sortValue) {
+  sort(key, sortType) {
     const sortData = [...this.data];
     return sortData.sort((item1, item2) => {
-      const value1 = item1[sortValue];
-      const value2 = item2[sortValue];
+      let value1 = item1[key];
+      let value2 = item2[key];
 
-      return ((value1 < value2) ? -1 : ((value1 > value2) ? 1 : 0));
+      if (key === 'id' || key === 'year' || key === 'imbd') {
+        value1 = parseFloat(value1);
+        value2 = parseFloat(value2);  
+      }
+
+      if (sortType === 'abc') return ((value1 < value2) ? -1 : ((value1 > value2) ? 1 : 0));
+      if (sortType === 'cba') return ((value1 > value2) ? -1 : ((value1 < value2) ? 1 : 0));
     });
-  }
-
-  getKeys() {
-    return Object.keys(this.data[0]);
   }
 
   keyGenerator() {
@@ -32,6 +34,10 @@ export default class Data {
         index = 0;
       }
     };
+  }
+
+  getKeys() {
+    return Object.keys(this.data[0]);
   }
 
   getNextKey() {

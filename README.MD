@@ -1,5 +1,5 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/x55e9pv3jmexktb9?svg=true)](https://ci.appveyor.com/project/fedoweb/loading-and-sorting)
+[![Build status](https://ci.appveyor.com/api/projects/status/0t41kug48xflngft?svg=true)](https://ci.appveyor.com/project/fedoweb/in-memory-storing)
 
-# Loading and Sorting, data-attributes (задача со звёздочкой)
+# In-Memory Sorting (задача со звёздочкой)
 
-[Посмотреть демо на GitHub Pages](https://fedoweb.github.io/loading-and-sorting/)
+[Посмотреть демо на GitHub Pages](https://fedoweb.github.io/in-memory-storing/)
